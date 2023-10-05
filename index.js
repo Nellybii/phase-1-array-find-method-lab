@@ -6,9 +6,9 @@ const record = [
      {year: "2023", result: "S"},
   ]
   function superbowlWin(array){
-    for(let item of array){
-        if(item.result === "W"){
-            return item.year;
-        }
+    const win = array.find(record=>record.result == "W");
+    if (win){
+        return win.year
     }
+    return undefined
 }
